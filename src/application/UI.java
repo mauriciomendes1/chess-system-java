@@ -7,20 +7,20 @@ public class UI {
 	//MÉTODO PARA IMPRIMIR O TABULEIRO
 	public static void printBoard(ChessPiece[][] pieces) {
 		for(int i = 0;i < pieces.length;i++) {
-			System.out.print((8 - i));
+			System.out.print((8 - i) + " ");
 			for(int j=0;j < pieces.length;j++) {
 				printPieces(pieces[i][j]);
 			}
 			System.out.println();
 		}
-		System.out.println("  a  b  c  d  e  f  g  h");
+		System.out.println("  a b c d e f g h");
 	}
 	
 	//MÉTODO PARA IMPRIMIR UMA PEÇA
 	private static void printPieces(ChessPiece piece) {
 		
 		if(piece == null) {
-			System.out.print(" - ");
+			System.out.print("- ");
 		}else {
 			System.out.print(piece);
 		}
